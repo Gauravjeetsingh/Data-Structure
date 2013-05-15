@@ -37,10 +37,9 @@ fourth -> link = NULL ;
 
 ptr = first;
 
-while(ptr->link != NULL)
+while(ptr != NULL)
 {
 printf("%d\n",ptr->data);
 ptr = ptr->link;
 }
-printf("%d\n",ptr->data);
 }
