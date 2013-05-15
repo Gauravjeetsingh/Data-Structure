@@ -10,7 +10,7 @@ int data;
 struct node *link;
 };
 
-struct node *first, *second, *third, *ptr;
+struct node *first, *second, *third, *fourth, *ptr;
 
 first=(struct node*)malloc(sizeof(struct node));
 first->data = 10;
@@ -21,6 +21,9 @@ second->data = 30;
 third=(struct node*)malloc(sizeof(struct node));
 third->data = 40;
 
+fourth=(struct node*)malloc(sizeof(struct node));
+fourth->data = 60;
+
 ptr=(struct node*)malloc(sizeof(struct node));
 
 
@@ -28,14 +31,16 @@ first->link = second;
 
 second -> link = third;
 
-third -> link = NULL;
+third -> link = fourth;
+
+fourth -> link = NULL ;
+
 ptr = first;
-//printf("%d \n %d \n %d",first->data,second->data, third->data);
+
 while(ptr->link != NULL)
 {
 printf("%d\n",ptr->data);
 ptr = ptr->link;
 }
 printf("%d\n",ptr->data);
-
 }
